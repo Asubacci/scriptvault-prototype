@@ -1,0 +1,930 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ScriptVault - Screenplay Ecosystem</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="site-header" aria-label="Site header">
+        <button class="brand brand-button" data-view="home" type="button" aria-label="ScriptVault home">
+          <span class="brand-mark">SV</span>
+          <span>ScriptVault</span>
+        </button>
+        <nav class="nav-list" aria-label="Primary navigation">
+          <button class="nav-item" data-view="marketplace" type="button">Marketplace</button>
+          <button class="nav-item" data-view="coverage" type="button">Script Coverage</button>
+          <button class="nav-item" data-view="generator" type="button">Create Screenplay</button>
+          <button class="nav-item" data-view="library" type="button">Login/Profile</button>
+        </nav>
+      </header>
+      <main class="main-content">
+        <section class="view active" id="home" aria-labelledby="home-title">
+          <section class="clean-hero">
+            <div class="clean-hero-copy">
+              <p class="eyebrow">ScriptVault</p>
+              <h1 id="home-title">Turn your screenplay into a market-ready asset</h1>
+              <p>Get professional coverage, improve your script, and connect with producers ready to buy.</p>
+              <div class="clean-actions">
+                <button class="gold-button" data-view="coverage" type="button">Get Script Coverage</button>
+                <button class="outline-button" data-view="marketplace" type="button">Browse Scripts</button>
+              </div>
+              <small>Trusted by writers and producers for script validation and discovery</small>
+            </div>
+            <div class="hero-mark" aria-hidden="true">
+              <span>INT.</span>
+              <strong>Validated stories only</strong>
+            </div>
+          </section>
+
+          <section class="home-section path-section" aria-labelledby="path-title">
+            <h2 id="path-title">What do you want to do?</h2>
+            <div class="path-grid">
+              <article class="path-card">
+                <span class="path-icon">W</span>
+                <h3>For Writers</h3>
+                <p>Improve, validate, and sell your script</p>
+                <ul>
+                  <li>Get coverage and scoring</li>
+                  <li>Rewrite with guidance</li>
+                  <li>List on the marketplace</li>
+                </ul>
+                <button class="gold-button" data-view="coverage" type="button">Start with Coverage</button>
+              </article>
+              <article class="path-card">
+                <span class="path-icon">P</span>
+                <h3>For Producers</h3>
+                <p>Discover ready-to-produce screenplays</p>
+                <ul>
+                  <li>Browse vetted scripts</li>
+                  <li>View scores and breakdowns</li>
+                  <li>Acquire rights</li>
+                </ul>
+                <button class="outline-button" data-view="marketplace" type="button">
+                  Explore Marketplace
+                </button>
+              </article>
+            </div>
+          </section>
+
+          <section class="home-section" aria-labelledby="how-title">
+            <h2 id="how-title">How ScriptVault works</h2>
+            <div class="steps-grid">
+              <article>
+                <span>1</span>
+                <h3>Upload Your Script</h3>
+                <p>Submit your screenplay for professional review.</p>
+              </article>
+              <article>
+                <span>2</span>
+                <h3>Get Coverage & Score</h3>
+                <p>Receive ratings, feedback, and improvement insights.</p>
+              </article>
+              <article>
+                <span>3</span>
+                <h3>Sell or Pitch</h3>
+                <p>List your script or connect with producers.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="home-section" aria-labelledby="featured-title">
+            <div class="simple-section-heading">
+              <h2 id="featured-title">Featured Screenplays</h2>
+              <button class="outline-button" data-view="marketplace" type="button">
+                View All Screenplays
+              </button>
+            </div>
+            <div class="featured-grid">
+              <article class="featured-card">
+                <div class="poster poster-one"><span>The Last Beacon</span></div>
+                <h3>The Last Beacon</h3>
+                <p>Thriller, Drama</p>
+                <div><span>Score 86</span><strong>₦185,000</strong></div>
+              </article>
+              <article class="featured-card">
+                <div class="poster poster-two"><span>Red Horizon</span></div>
+                <h3>Red Horizon</h3>
+                <p>Sci-Fi, Adventure</p>
+                <div><span>Score 79</span><strong>₦145,000</strong></div>
+              </article>
+              <article class="featured-card">
+                <div class="poster poster-three"><span>Echoes</span></div>
+                <h3>Echoes of Silence</h3>
+                <p>Drama, Mystery</p>
+                <div><span>Score 82</span><strong>₦160,000</strong></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="home-section" aria-labelledby="pricing-title">
+            <h2 id="pricing-title">Simple pricing for each path</h2>
+            <div class="pricing-strip">
+              <article>
+                <span>Coverage</span>
+                <strong>₦7,500 - ₦50,000+</strong>
+                <p>Pay directly or use credits.</p>
+              </article>
+              <article>
+                <span>AI Credits</span>
+                <strong>1 credit = ₦500</strong>
+                <p>Metered generation protects quality and cost.</p>
+              </article>
+              <article>
+                <span>Marketplace</span>
+                <strong>20% commission</strong>
+                <p>Sellers keep 80% after platform commission.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="home-section" aria-labelledby="trust-title">
+            <h2 id="trust-title">A marketplace you can trust</h2>
+            <div class="trust-grid-simple">
+              <article>
+                <strong>Verified Quality</strong>
+                <p>Scripts must pass coverage before listing.</p>
+              </article>
+              <article>
+                <strong>Transparent Scoring</strong>
+                <p>Clear ratings for story, structure, and marketability.</p>
+              </article>
+              <article>
+                <strong>Production Focused</strong>
+                <p>Built for real buyers, not just readers.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="home-section proof-section" aria-labelledby="proof-title">
+            <h2 id="proof-title">Writers and producers trust ScriptVault</h2>
+            <div class="quote-grid">
+              <blockquote>“This helped me fix my script before pitching.”</blockquote>
+              <blockquote>“Finally, a platform with quality control.”</blockquote>
+            </div>
+          </section>
+
+          <section class="final-cta" aria-labelledby="final-cta-title">
+            <h2 id="final-cta-title">Ready to take your screenplay seriously?</h2>
+            <div class="clean-actions">
+              <button class="gold-button" data-view="coverage" type="button">Get Script Coverage</button>
+              <button class="outline-button" data-view="marketplace" type="button">Browse Marketplace</button>
+            </div>
+          </section>
+        </section>
+
+        <section class="view" id="marketplace" aria-labelledby="marketplace-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Marketplace + Coverage + Screenplay Generation</p>
+              <h1 id="marketplace-title">Production-ready stories, validated before they sell.</h1>
+              <p>
+                Buy screenplays, test market readiness, and generate structured drafts with an engine built
+                around story beats, conflict, and filmable scenes.
+              </p>
+            </div>
+            <div class="hero-actions">
+              <button class="gold-button" data-view="producers" type="button">
+                Join Producer Early Access
+              </button>
+              <button class="outline-button" data-view="coverage" type="button">List a Screenplay</button>
+            </div>
+          </div>
+
+          <div class="home-grid">
+            <section class="marketplace-panel" aria-label="Screenplay marketplace">
+              <div class="filter-row">
+                <button class="filter active" type="button">All Genres</button>
+                <button class="filter" type="button">Thriller</button>
+                <button class="filter" type="button">Drama</button>
+                <button class="filter" type="button">Comedy</button>
+                <button class="filter" type="button">Faith</button>
+                <button class="filter" type="button">Low Budget</button>
+                <select aria-label="Sort marketplace">
+                  <option>Sort: Featured</option>
+                  <option>Highest Coverage Score</option>
+                  <option>Lowest Production Budget</option>
+                  <option>Newest Scripts</option>
+                </select>
+              </div>
+
+              <div class="script-grid">
+                <article class="script-card selected">
+                  <div class="poster poster-one"><span>The Last Beacon</span></div>
+                  <div class="script-card-body">
+                    <div class="card-title-row">
+                      <h2>The Last Beacon</h2>
+                      <span class="badge">Verified</span>
+                    </div>
+                    <p>Thriller, Drama</p>
+                    <p>
+                      A disgraced coast guard officer uncovers a secret that could save thousands or destroy
+                      him.
+                    </p>
+                    <div class="card-meta">
+                      <span>Score 86</span>
+                      <strong>₦185,000</strong>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="script-card">
+                  <div class="poster poster-two"><span>Red Horizon</span></div>
+                  <div class="script-card-body">
+                    <h2>Red Horizon</h2>
+                    <p>Sci-Fi, Adventure</p>
+                    <p>A Mars colony goes silent after a rescue crew discovers an ancient threat.</p>
+                    <div class="card-meta">
+                      <span>Score 79</span>
+                      <strong>₦145,000</strong>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="script-card">
+                  <div class="poster poster-three"><span>Echoes of Silence</span></div>
+                  <div class="script-card-body">
+                    <h2>Echoes of Silence</h2>
+                    <p>Drama, Mystery</p>
+                    <p>A therapist questions her own memory after a patient mirrors her hidden past.</p>
+                    <div class="card-meta">
+                      <span>Score 82</span>
+                      <strong>₦160,000</strong>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="script-card">
+                  <div class="poster poster-four"><span>Second Chances</span></div>
+                  <div class="script-card-body">
+                    <h2>Second Chances</h2>
+                    <p>Family, Drama</p>
+                    <p>
+                      A washed-up athlete returns home to rebuild his future and face what he left behind.
+                    </p>
+                    <div class="card-meta">
+                      <span>Score 74</span>
+                      <strong>₦125,000</strong>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <aside class="detail-panel" aria-label="Selected screenplay details">
+              <div class="detail-top">
+                <div class="mini-poster poster-one"><span>Beacon</span></div>
+                <div>
+                  <span class="badge">Production Ready</span>
+                  <h2>The Last Beacon</h2>
+                  <p>Feature screenplay. Thriller, drama. 103 pages.</p>
+                </div>
+              </div>
+              <p class="logline">
+                A disgraced coast guard officer stationed on a remote island discovers a buried government
+                secret that puts the lives of thousands at risk.
+              </p>
+              <div class="breakdown">
+                <span>Budget: Mid</span>
+                <span>Locations: 7</span>
+                <span>Cast: 9</span>
+                <span>Media: Feature</span>
+              </div>
+              <div class="score-card">
+                <div class="score-ring">86<small>Excellent</small></div>
+                <div class="score-bars">
+                  <label>Plot <span style="--score: 88%"></span></label>
+                  <label>Structure <span style="--score: 82%"></span></label>
+                  <label>Character <span style="--score: 86%"></span></label>
+                  <label>Market <span style="--score: 87%"></span></label>
+                </div>
+              </div>
+              <div class="sell-tags">
+                <span>Thriller</span>
+                <span>Minimal locations</span>
+                <span>Conspiracy</span>
+                <span>High stakes</span>
+              </div>
+              <div class="license-box">
+                <div>
+                  <span>Download License</span>
+                  <strong>₦48,000</strong>
+                </div>
+                <div>
+                  <span>Production Rights</span>
+                  <strong>₦185,000+</strong>
+                </div>
+              </div>
+              <p class="fine-print">
+                Download licenses allow review and internal consideration. Production rights require a
+                separate rights purchase and agreement.
+              </p>
+              <button class="gold-button full" type="button">Buy Screenplay</button>
+              <button class="outline-button full" type="button">Add Scene Breakdown +₦10,000</button>
+            </aside>
+          </div>
+        </section>
+
+        <section class="view" id="producers" aria-labelledby="producers-title">
+          <div class="producer-hero">
+            <div>
+              <p class="eyebrow">Early Access</p>
+              <h1 id="producers-title">Find coverage-vetted screenplays before the market gets crowded.</h1>
+              <p>
+                Join the producer list to receive curated scripts, licensing updates, and early access to
+                verified stories that match your production needs.
+              </p>
+            </div>
+            <div class="demand-card">
+              <span>Launch Signal</span>
+              <strong>10-30</strong>
+              <p>serious buyer conversations validates the first marketplace loop.</p>
+            </div>
+          </div>
+
+          <div class="two-column">
+            <form class="panel form-panel" id="producerForm">
+              <h2>Producer Waitlist</h2>
+              <label>Full name<input required placeholder="Your name" /></label>
+              <label
+                >Company or studio<input placeholder="Production company, studio, or independent"
+              /></label>
+              <label>Email<input required type="email" placeholder="producer@example.com" /></label>
+              <label
+                >Role
+                <select required>
+                  <option value="">Select role</option>
+                  <option>Producer</option>
+                  <option>Director</option>
+                  <option>Studio executive</option>
+                  <option>Investor</option>
+                  <option>Distributor</option>
+                  <option>Development executive</option>
+                </select>
+              </label>
+              <label
+                >What are you looking for?
+                <select required>
+                  <option value="">Select primary need</option>
+                  <option>Buy non-exclusive scripts</option>
+                  <option>Buy exclusive rights</option>
+                  <option>Find low-budget production-ready stories</option>
+                  <option>Commission rewrites or adaptations</option>
+                  <option>Track promising writers</option>
+                </select>
+              </label>
+              <div class="compact-grid">
+                <label
+                  >Preferred genre
+                  <select>
+                    <option>Drama</option>
+                    <option>Thriller</option>
+                    <option>Comedy</option>
+                    <option>Action</option>
+                    <option>Faith / Family</option>
+                  </select>
+                </label>
+                <label
+                  >Typical budget
+                  <select>
+                    <option>Micro budget</option>
+                    <option>Low budget</option>
+                    <option>Mid budget</option>
+                    <option>Premium / studio</option>
+                  </select>
+                </label>
+              </div>
+              <label
+                >Production timeline
+                <select>
+                  <option>Immediately sourcing scripts</option>
+                  <option>Next 3 months</option>
+                  <option>Next 6 months</option>
+                  <option>Researching for later</option>
+                </select>
+              </label>
+              <fieldset class="interest-checks">
+                <legend>Send me updates about</legend>
+                <label><input type="checkbox" checked /> New verified marketplace scripts</label>
+                <label><input type="checkbox" checked /> Low-location, cast-efficient scripts</label>
+                <label><input type="checkbox" /> Coverage reports and score previews</label>
+                <label><input type="checkbox" /> Investment and partnership opportunities</label>
+              </fieldset>
+              <label
+                >Notes<textarea
+                  rows="4"
+                  placeholder="Tell us what kinds of stories you want first access to."
+                ></textarea>
+              </label>
+              <button class="gold-button full" type="submit">Request Early Access</button>
+              <p class="success-message" id="producerSuccess" role="status"></p>
+            </form>
+
+            <aside class="panel producer-panel">
+              <h2>Why Producers Join Early</h2>
+              <div class="producer-benefits">
+                <article>
+                  <strong>Curated supply</strong>
+                  <p>
+                    See scripts only after they pass coverage, score visibility, and production-readiness
+                    checks.
+                  </p>
+                </article>
+                <article>
+                  <strong>Faster discovery</strong>
+                  <p>Filter by genre, budget level, locations, cast size, tags, and licensing model.</p>
+                </article>
+                <article>
+                  <strong>Cleaner negotiations</strong>
+                  <p>Listings show seller profiles, rights type, add-ons, and coverage-backed pricing.</p>
+                </article>
+              </div>
+              <h3>Demand Signals We Track</h3>
+              <ul class="check-list">
+                <li>Genres producers request most often</li>
+                <li>Budget bands and production timelines</li>
+                <li>Exclusive vs non-exclusive licensing preference</li>
+                <li>Interest in add-ons like scene breakdowns and shot lists</li>
+              </ul>
+              <div class="launch-metrics">
+                <span><strong>100-300</strong> writer waitlist</span>
+                <span><strong>30-50</strong> coverage submissions</span>
+                <span><strong>10-20</strong> approved scripts</span>
+                <span><strong>3-5</strong> paid licensing conversations</span>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="view" id="coverage" aria-labelledby="coverage-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Coverage System</p>
+              <h1 id="coverage-title">Quality gate every script before monetization.</h1>
+              <p>
+                Coverage produces a PDF report, marketplace eligibility score, rewrite notes, and production
+                feasibility review.
+              </p>
+            </div>
+          </div>
+
+          <div class="package-grid coverage-packages" aria-label="Coverage pricing packages">
+            <article class="package-card">
+              <span>Basic Coverage</span>
+              <strong>₦7,500</strong>
+              <small>15 credits</small>
+              <p>Summary, strengths, weaknesses, and score.</p>
+            </article>
+            <article class="package-card featured-package">
+              <span>Standard Coverage</span>
+              <strong>₦15,000</strong>
+              <small>30 credits</small>
+              <p>Full story analysis, character notes, structure notes, and marketability.</p>
+            </article>
+            <article class="package-card">
+              <span>Pro Coverage</span>
+              <strong>₦30,000</strong>
+              <small>60 credits</small>
+              <p>Deep notes, scene-level feedback, and rewrite suggestions.</p>
+            </article>
+            <article class="package-card">
+              <span>Studio Coverage</span>
+              <strong>₦50,000+</strong>
+              <small>100 credits</small>
+              <p>Professional-style report, rating, and improvement plan.</p>
+            </article>
+          </div>
+
+          <div class="two-column">
+            <form class="panel form-panel" id="coverageForm">
+              <h2>Upload for Coverage</h2>
+              <label>Script title<input required placeholder="Example: Lagos After Midnight" /></label>
+              <label
+                >Screen-media
+                <select required>
+                  <option value="">Select format</option>
+                  <option>Feature</option>
+                  <option>Series</option>
+                  <option>Mini-series</option>
+                </select>
+              </label>
+              <label
+                >Listing intent
+                <select required>
+                  <option>Coverage only</option>
+                  <option>Coverage + marketplace eligibility</option>
+                  <option>Coverage + rewrite support</option>
+                </select>
+              </label>
+              <label>Script file<input required type="file" accept=".pdf,.doc,.docx,.fdx" /></label>
+              <div class="disclaimer-box">
+                <h3>Coverage Disclaimer</h3>
+                <p>
+                  Each clause must be accepted before a script can proceed to paid coverage or marketplace
+                  review.
+                </p>
+                <label
+                  ><input type="checkbox" required /> Coverage is an assessment, not a guarantee of commercial
+                  success.</label
+                >
+                <label
+                  ><input type="checkbox" required /> ScriptVault does not guarantee script sales, production,
+                  funding, or distribution.</label
+                >
+                <label
+                  ><input type="checkbox" required /> The writer retains copyright and remains responsible for
+                  proving ownership.</label
+                >
+                <label
+                  ><input type="checkbox" required /> The seller is responsible for marketing and positioning
+                  their own work.</label
+                >
+                <label
+                  ><input type="checkbox" required /> Marketplace score visibility is required for eligible
+                  listed scripts.</label
+                >
+                <label
+                  ><input type="checkbox" required /> Platform commission applies to all marketplace
+                  sales.</label
+                >
+                <label
+                  ><input type="checkbox" required /> The coverage fee is non-refundable once analysis
+                  begins.</label
+                >
+                <a href="#terms">Read coverage terms</a>
+                <p class="form-error" id="coverageError" role="alert"></p>
+              </div>
+              <button class="gold-button full" type="submit">Submit for Paid Coverage</button>
+            </form>
+
+            <div class="panel report-preview">
+              <h2>Coverage Output</h2>
+              <div class="rating-grid">
+                <span>Plot <strong>8.4</strong></span>
+                <span>Structure <strong>8.0</strong></span>
+                <span>Dialogue <strong>7.8</strong></span>
+                <span>Character <strong>8.6</strong></span>
+                <span>Originality <strong>8.2</strong></span>
+                <span>Market Viability <strong>8.1</strong></span>
+              </div>
+              <h3>Marketplace Eligibility</h3>
+              <p>
+                Scripts above the threshold can be listed after the writer accepts rating visibility and
+                pricing rules.
+              </p>
+              <ul class="check-list">
+                <li>Story strengths and weaknesses</li>
+                <li>Clear rewrite suggestions</li>
+                <li>Budget, locations, and cast practicality</li>
+                <li>Final score for dynamic pricing</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" id="generator" aria-labelledby="generator-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Screenplay Generation</p>
+              <h1 id="generator-title">Generate from story logic, not random scenes.</h1>
+              <p>
+                The engine builds beat outlines first, validates every scene, and rewrites weak scenes before
+                export.
+              </p>
+            </div>
+          </div>
+
+          <div class="credit-overview" aria-label="Credit pricing overview">
+            <article class="credit-balance">
+              <span>Your Credit Wallet</span>
+              <strong>24 credits</strong>
+              <p>
+                1 credit = ₦500. Credits are reserved before AI jobs run and returned if a system error fails
+                the job.
+              </p>
+            </article>
+            <div class="credit-packages">
+              <span>Starter ₦2,500 / 5 credits</span>
+              <span>Creator ₦5,000 / 11 credits</span>
+              <span>Pro Writer ₦10,000 / 24 credits</span>
+              <span>Studio ₦25,000 / 65 credits</span>
+              <span>Producer ₦50,000 / 140 credits</span>
+            </div>
+          </div>
+
+          <div class="engine-layout">
+            <form class="panel generator-form">
+              <h2>Story Setup</h2>
+              <label>Title<input placeholder="Example: The Glass Signal" /></label>
+              <label
+                >Logline<textarea rows="3" placeholder="One or two lines describing the core hook"></textarea>
+              </label>
+              <label
+                >Theme
+                <select id="themeSelect">
+                  <option value="">Choose a theme</option>
+                  <optgroup label="Family & Relationships">
+                    <option>Family loyalty versus personal freedom</option>
+                    <option>Marriage under financial pressure</option>
+                    <option>Parent-child reconciliation</option>
+                    <option>Forbidden love and social duty</option>
+                    <option>Sibling rivalry and inheritance</option>
+                  </optgroup>
+                  <optgroup label="Power & Society">
+                    <option>Corruption in public office</option>
+                    <option>Power, fame, and moral compromise</option>
+                    <option>Class mobility and hidden costs</option>
+                    <option>Religious authority and accountability</option>
+                    <option>Community survival against institutions</option>
+                  </optgroup>
+                  <optgroup label="Identity & Morality">
+                    <option>Redemption after betrayal</option>
+                    <option>Identity crisis and reinvention</option>
+                    <option>Truth versus loyalty</option>
+                    <option>Ambition versus integrity</option>
+                    <option>Guilt, confession, and forgiveness</option>
+                  </optgroup>
+                  <optgroup label="Conflict & Justice">
+                    <option>Revenge versus justice</option>
+                    <option>Survival under threat</option>
+                    <option>Wrongful accusation</option>
+                    <option>Female-driven resistance</option>
+                    <option>Crime, consequence, and exposure</option>
+                  </optgroup>
+                  <optgroup label="Finance & Commerce">
+                    <option>Debt, status, and family shame</option>
+                    <option>Greed in a fast-money economy</option>
+                    <option>Business betrayal</option>
+                    <option>Fraud, reputation, and downfall</option>
+                    <option>Inheritance, land, and legacy</option>
+                    <option>Wealth versus spiritual cost</option>
+                  </optgroup>
+                  <option value="custom">&#9999; None of these - I'll write my own.</option>
+                </select>
+              </label>
+              <label class="custom-theme hidden" id="customThemeWrap"
+                >Custom theme
+                <input id="customTheme" placeholder="Write your own theme in one sentence" />
+                <small>Use a clear dramatic tension, such as ambition versus family duty.</small>
+              </label>
+              <div class="compact-grid">
+                <label
+                  >Structure<select>
+                    <option>3-Act Structure</option>
+                    <option>Dan Harmon Story Circle</option>
+                  </select></label
+                >
+                <label
+                  >Genre<select>
+                    <option>Drama</option>
+                    <option>Thriller</option>
+                    <option>Action</option>
+                    <option>Comedy</option>
+                  </select></label
+                >
+                <label
+                  >Budget<select>
+                    <option>Low</option>
+                    <option>Mid</option>
+                    <option>High</option>
+                  </select></label
+                >
+                <label>Locations<input type="number" min="1" value="5" /></label>
+                <label>Cast size<input type="number" min="1" value="7" /></label>
+                <label
+                  >Screen-media<select>
+                    <option>Feature</option>
+                    <option>Series</option>
+                    <option>Mini-series</option>
+                  </select></label
+                >
+              </div>
+              <button class="gold-button full" type="button">Generate Beat Outline - 4 credits</button>
+            </form>
+
+            <div class="panel engine-preview">
+              <div class="tabs">
+                <button class="active" type="button">Outline</button>
+                <button type="button">Beats</button>
+                <button type="button">Scenes</button>
+                <button type="button">Polish</button>
+              </div>
+              <div class="beat-timeline">
+                <span>Opening situation</span>
+                <span>Inciting incident</span>
+                <span>Rising conflict</span>
+                <span>Midpoint shift</span>
+                <span>Crisis</span>
+                <span>Climax</span>
+                <span>Resolution</span>
+              </div>
+              <div class="validation-grid">
+                <article>
+                  <strong>Scene Purpose</strong>
+                  <p>Every scene must advance story, reveal character, or increase conflict.</p>
+                </article>
+                <article>
+                  <strong>Conflict Engine</strong>
+                  <p>Person vs person, self, or situation is required before approval.</p>
+                </article>
+                <article>
+                  <strong>Visual Storytelling</strong>
+                  <p>Emotion becomes behavior. Thoughts become filmable action.</p>
+                </article>
+                <article>
+                  <strong>Auto-Correction</strong>
+                  <p>Weak scenes are flagged and rewritten against structure rules.</p>
+                </article>
+              </div>
+              <div class="screenplay-page">
+                <strong>INT. FERRY TERMINAL - NIGHT</strong>
+                <p>
+                  RAIN needles the concrete. ADA grips a torn ticket while the final ferry groans away from
+                  the dock.
+                </p>
+                <p>Across the terminal, her brother counts a stack of cash he swore he never touched.</p>
+              </div>
+              <div class="ai-price-list" aria-label="AI generation credit costs">
+                <h3>Common AI Actions</h3>
+                <div><span>Generate logline</span><strong>1 credit</strong></div>
+                <div><span>Generate synopsis</span><strong>2 credits</strong></div>
+                <div><span>Character bible</span><strong>3 credits</strong></div>
+                <div><span>Feature outline</span><strong>15 credits</strong></div>
+                <div><span>Full feature screenplay</span><strong>50-80 credits</strong></div>
+                <div><span>Final polish</span><strong>15-30 credits</strong></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" id="library" aria-labelledby="library-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Member Workspace</p>
+              <h1 id="library-title">Track purchases, submissions, and generated projects.</h1>
+              <p>
+                A Studio Member can buy scripts, upload for coverage, sell approved scripts, and generate new
+                screenplays from one account.
+              </p>
+            </div>
+          </div>
+          <div class="panel table-panel">
+            <table>
+              <thead>
+                <tr>
+                  <th>Project</th>
+                  <th>Type</th>
+                  <th>Status</th>
+                  <th>Next Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>The Last Beacon</td>
+                  <td>Purchased script</td>
+                  <td>Ready to download</td>
+                  <td>Download PDF</td>
+                </tr>
+                <tr>
+                  <td>Market Woman</td>
+                  <td>Coverage</td>
+                  <td>Reader assigned</td>
+                  <td>Await report</td>
+                </tr>
+                <tr>
+                  <td>The Glass Signal</td>
+                  <td>Generated script</td>
+                  <td>Beat outline approved</td>
+                  <td>Generate scenes</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="view" id="about" aria-labelledby="about-title">
+          <div class="about-hero">
+            <p class="eyebrow">About ScriptVault</p>
+            <h1 id="about-title">
+              Moving screenplays from idea to validation to production to monetization.
+            </h1>
+          </div>
+          <div class="two-column about-cards">
+            <article class="panel">
+              <h2>Mission</h2>
+              <p>
+                Help writers, producers, and studios discover structured, filmable, market-ready screenplays
+                with transparent quality control.
+              </p>
+            </article>
+            <article class="panel">
+              <h2>Vision</h2>
+              <p>
+                Become the trusted screenplay infrastructure for African storytelling and commercially viable
+                production pipelines.
+              </p>
+            </article>
+          </div>
+          <div class="difference-grid">
+            <article class="panel">
+              <h2>Intelligence Engine</h2>
+              <p>
+                Stories are generated and improved through beats, character arcs, conflict, pacing, and visual
+                storytelling rules.
+              </p>
+            </article>
+            <article class="panel">
+              <h2>Quality Gating</h2>
+              <p>Scripts must pass paid coverage before they can enter the marketplace for sale.</p>
+            </article>
+            <article class="panel">
+              <h2>Production Readiness</h2>
+              <p>
+                Every listing exposes budget level, cast size, location count, media format, and
+                coverage-backed pricing.
+              </p>
+            </article>
+          </div>
+          <div class="values-strip">
+            <span>Quality Over Volume</span>
+            <span>Writers First</span>
+            <span>Transparency</span>
+            <span>African Storytelling</span>
+            <span>hello@scriptvault.africa</span>
+          </div>
+        </section>
+
+        <section class="view" id="contact" aria-labelledby="contact-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Contact</p>
+              <h1 id="contact-title">Talk to the ScriptVault team.</h1>
+              <p>
+                Send marketplace questions, coverage requests, partnership notes, or technical support issues.
+              </p>
+            </div>
+          </div>
+          <div class="two-column">
+            <form class="panel form-panel" id="contactForm">
+              <label>Name<input required placeholder="Your name" /></label>
+              <label>Email<input required type="email" placeholder="you@example.com" /></label>
+              <label>Phone<input placeholder="+234" /></label>
+              <label
+                >Role<select>
+                  <option>Writer</option>
+                  <option>Producer</option>
+                  <option>Studio Member</option>
+                  <option>Investor</option>
+                </select></label
+              >
+              <label
+                >Subject<select>
+                  <option>General enquiry</option>
+                  <option>Coverage support</option>
+                  <option>Partnership or investment</option>
+                  <option>Technical support</option>
+                </select></label
+              >
+              <label>Message<textarea required rows="5" placeholder="How can we help?"></textarea></label>
+              <button class="gold-button full" type="submit">Send Message</button>
+              <p class="success-message" id="contactSuccess" role="status"></p>
+            </form>
+            <aside class="panel contact-panel">
+              <h2>Direct Contacts</h2>
+              <p><strong>General:</strong> hello@scriptvault.africa</p>
+              <p><strong>Partnerships:</strong> partners@scriptvault.africa</p>
+              <p><strong>Support:</strong> support@scriptvault.africa</p>
+              <p><strong>Phone:</strong> +234 800 000 0000</p>
+              <p><strong>Office:</strong> Lagos, Nigeria</p>
+              <div class="social-row"><a href="#">X</a><a href="#">Instagram</a><a href="#">LinkedIn</a></div>
+              <h3>FAQ Preview</h3>
+              <p>Can I sell a script without coverage? No, every listing must pass coverage first.</p>
+              <p>Do writers keep copyright? Yes, writers retain copyright.</p>
+              <p>How is pricing decided? Coverage score influences marketplace pricing.</p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="view" id="admin" aria-labelledby="admin-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Admin</p>
+              <h1 id="admin-title">Approve scripts, manage payments, and monitor quality.</h1>
+              <p>Admins control users, listings, coverage outcomes, commissions, and platform-wide data.</p>
+            </div>
+          </div>
+          <div class="dashboard-grid">
+            <article class="panel stat"><span>Pending Listings</span><strong>14</strong></article>
+            <article class="panel stat"><span>Coverage Queue</span><strong>27</strong></article>
+            <article class="panel stat"><span>Commission Month</span><strong>₦820k</strong></article>
+            <article class="panel stat"><span>Pass Rate</span><strong>61%</strong></article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
