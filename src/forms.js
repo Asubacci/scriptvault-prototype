@@ -75,6 +75,8 @@ function initThemeSelector() {
 function initCoverageForm() {
   const coverageForm = getRequiredElement("#coverageForm");
   const coverageError = getRequiredElement("#coverageError");
+  const coverageDemoReport = getRequiredElement("#coverageDemoReport");
+  const coverageDemoTitle = getRequiredElement("#coverageDemoTitle");
 
   coverageForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -88,7 +90,11 @@ function initCoverageForm() {
       return;
     }
 
+    const title = coverageForm.querySelector("input")?.value.trim() || "Untitled Screenplay";
+    coverageDemoTitle.textContent = `Coverage Report: ${title}`;
+    coverageDemoReport.classList.remove("hidden");
     setStatus(coverageError, messages.coverageSuccess);
+    coverageDemoReport.scrollIntoView({ behavior: "smooth", block: "center" });
     logger.info("coverage_submit_success");
   });
 }
@@ -131,17 +137,46 @@ function initProducerForm() {
 function initPrototypeActions() {
   const buyScreenplayButton = getRequiredElement("#buyScreenplayButton");
   const purchaseSuccess = getRequiredElement("#purchaseSuccess");
+  const purchaseDemoResult = getRequiredElement("#purchaseDemoResult");
   const generateOutlineButton = getRequiredElement("#generateOutlineButton");
   const generationSuccess = getRequiredElement("#generationSuccess");
+  const downloadSampleCoverageButton = getRequiredElement("#downloadSampleCoverageButton");
 
   buyScreenplayButton.addEventListener("click", () => {
+    purchaseDemoResult.classList.remove("hidden");
     setStatus(purchaseSuccess, messages.purchaseSuccess);
+    purchaseDemoResult.scrollIntoView({ behavior: "smooth", block: "center" });
     logger.info("purchase_demo_started", { item: "The Last Beacon" });
   });
 
   generateOutlineButton.addEventListener("click", () => {
     setStatus(generationSuccess, messages.generationSuccess);
     logger.info("generation_demo_started", { stage: "beat_outline" });
+  });
+
+  downloadSampleCoverageButton.addEventListener("click", () => {
+    const reportText = [
+      "ScriptVault Sample Coverage Report",
+      "",
+      "Final Score: 82 / 100",
+      "Marketplace: Eligible after rewrite",
+      "Turnaround: 2-5 business days",
+      "",
+      "Reader Notes:",
+      "The premise has strong commercial appeal for a contained Lagos thriller, but the midpoint needs a sharper reversal and the antagonist's goal should become visible earlier.",
+      "",
+      "Rewrite Priorities:",
+      "1. Reduce locations from 11 to 6 for a stronger low-budget production path.",
+      "2. Give the lead character a clearer moral choice before the climax.",
+      "3. Trim exposition-heavy dialogue in scenes 8, 14, and 22.",
+    ].join("\n");
+    const blob = new Blob([reportText], { type: "text/plain;charset=utf-8" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "scriptvault-sample-coverage-report.txt";
+    link.click();
+    URL.revokeObjectURL(link.href);
+    logger.info("sample_coverage_report_downloaded");
   });
 }
 

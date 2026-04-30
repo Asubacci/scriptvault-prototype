@@ -177,9 +177,21 @@
 
           <section class="home-section proof-section" aria-labelledby="proof-title">
             <h2 id="proof-title">Writers and producers trust ScriptVault</h2>
+            <p class="section-note">
+              Illustrative prototype feedback below shows the kind of validation we are testing with writers
+              and producers.
+            </p>
             <div class="quote-grid">
-              <blockquote>“This helped me fix my script before pitching.”</blockquote>
-              <blockquote>“Finally, a platform with quality control.”</blockquote>
+              <blockquote>
+                “The coverage score made it clear why my Lagos thriller felt expensive to shoot, and what I
+                could rewrite before pitching.”
+                <cite>Nollywood writer, Lagos</cite>
+              </blockquote>
+              <blockquote>
+                “I want fewer random scripts and more vetted stories with budget, cast, location, and rights
+                information already clear.”
+                <cite>Independent producer, Lagos</cite>
+              </blockquote>
             </div>
           </section>
 
@@ -341,6 +353,18 @@
               <button class="gold-button full" id="buyScreenplayButton" type="button">Buy Screenplay</button>
               <button class="outline-button full" type="button">Add Scene Breakdown +₦10,000</button>
               <p class="success-message" id="purchaseSuccess" role="status"></p>
+              <div class="demo-result hidden" id="purchaseDemoResult">
+                <h3>Demo Purchase Flow</h3>
+                <ol>
+                  <li>Choose license: Download License or Production Rights.</li>
+                  <li>Confirm buyer details and payment reference.</li>
+                  <li>Grant secure script access and record seller commission.</li>
+                </ol>
+                <p>
+                  In production this connects to Paystack/Flutterwave, verifies webhook payment, and unlocks
+                  the script in the buyer library.
+                </p>
+              </div>
             </aside>
           </div>
         </section>
@@ -653,6 +677,10 @@
 
             <div class="panel report-preview">
               <h2>Coverage Output</h2>
+              <p class="fine-print">
+                Submit the demo form to generate a sample report preview here. In production, this becomes a
+                downloadable PDF after payment and review.
+              </p>
               <div class="rating-grid">
                 <span>Plot <strong>8.4</strong></span>
                 <span>Structure <strong>8.0</strong></span>
@@ -672,6 +700,38 @@
                 <li>Budget, locations, and cast practicality</li>
                 <li>Final score for dynamic pricing</li>
               </ul>
+              <div class="demo-result hidden" id="coverageDemoReport" aria-live="polite">
+                <span class="badge">Sample PDF Preview</span>
+                <h3 id="coverageDemoTitle">Coverage Report: Lagos After Midnight</h3>
+                <div class="report-summary-grid">
+                  <article>
+                    <span>Final Score</span>
+                    <strong>82 / 100</strong>
+                  </article>
+                  <article>
+                    <span>Marketplace</span>
+                    <strong>Eligible after rewrite</strong>
+                  </article>
+                  <article>
+                    <span>Turnaround</span>
+                    <strong>2-5 business days</strong>
+                  </article>
+                </div>
+                <h4>Reader Notes</h4>
+                <p>
+                  The premise has strong commercial appeal for a contained Lagos thriller, but the midpoint
+                  needs a sharper reversal and the antagonist’s goal should become visible earlier.
+                </p>
+                <h4>Rewrite Priorities</h4>
+                <ul class="check-list">
+                  <li>Reduce locations from 11 to 6 for a stronger low-budget production path.</li>
+                  <li>Give the lead character a clearer moral choice before the climax.</li>
+                  <li>Trim exposition-heavy dialogue in scenes 8, 14, and 22.</li>
+                </ul>
+                <button class="outline-button full" id="downloadSampleCoverageButton" type="button">
+                  Download Sample Report
+                </button>
+              </div>
             </div>
           </div>
         </section>
@@ -862,6 +922,10 @@
               <p>
                 A Studio Member can buy scripts, upload for coverage, sell approved scripts, and generate new
                 screenplays from one account.
+              </p>
+              <p class="fine-print">
+                Coverage items marked “Reader assigned” enter the hybrid review queue. The coverage team
+                responds within 2-5 business days after payment confirmation and file checks.
               </p>
             </div>
           </div>
