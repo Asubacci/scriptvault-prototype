@@ -897,6 +897,11 @@
               </tbody>
             </table>
           </div>
+          <div class="panel profile-admin-card">
+            <h2>Admin Review</h2>
+            <p>Review producer waitlist demand, update lead status, add notes, and export CSV.</p>
+            <button class="outline-button" data-view="admin" type="button">Open Admin Review</button>
+          </div>
         </section>
 
         <section class="view" id="about" aria-labelledby="about-title">
@@ -1010,6 +1015,12 @@
               <h1 id="admin-title">Approve scripts, manage payments, and monitor quality.</h1>
               <p>Admins control users, listings, coverage outcomes, commissions, and platform-wide data.</p>
             </div>
+            <div class="hero-actions">
+              <button class="outline-button" id="refreshWaitlistButton" type="button">
+                Refresh Waitlist
+              </button>
+              <button class="gold-button" id="exportWaitlistButton" type="button">Export CSV</button>
+            </div>
           </div>
           <div class="dashboard-grid">
             <article class="panel stat"><span>Pending Listings</span><strong>14</strong></article>
@@ -1017,6 +1028,38 @@
             <article class="panel stat"><span>Commission Month</span><strong>₦820k</strong></article>
             <article class="panel stat"><span>Pass Rate</span><strong>61%</strong></article>
           </div>
+          <section class="panel admin-waitlist-panel" aria-labelledby="admin-waitlist-title">
+            <div class="admin-panel-heading">
+              <div>
+                <h2 id="admin-waitlist-title">Producer Waitlist Review</h2>
+                <p>
+                  Review early-access demand, qualify producer leads, record notes, and export CSV for
+                  follow-up.
+                </p>
+              </div>
+              <div class="admin-config">
+                <label>API URL<input id="adminApiUrl" placeholder="https://api.scriptvault..." /></label>
+                <label
+                  >Admin key<input id="adminKey" type="password" placeholder="Optional for live API"
+                /></label>
+              </div>
+            </div>
+            <p class="success-message" id="adminWaitlistStatus" role="status"></p>
+            <div class="table-panel admin-table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Producer</th>
+                    <th>Need</th>
+                    <th>Timeline</th>
+                    <th>Status</th>
+                    <th>Admin Notes</th>
+                  </tr>
+                </thead>
+                <tbody id="adminWaitlistRows"></tbody>
+              </table>
+            </div>
+          </section>
         </section>
       </main>
       <footer class="site-footer" aria-label="Site footer">

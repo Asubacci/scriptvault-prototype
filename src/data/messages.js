@@ -1,4 +1,9 @@
 export const messages = {
+  adminWaitlistDemo: "Showing sample waitlist leads. Add API URL and admin key to load live database leads.",
+  adminWaitlistError: "Could not load or save live waitlist data. Showing the local review table for now.",
+  adminWaitlistExported: "Waitlist CSV exported.",
+  adminWaitlistLoaded: "Live waitlist leads loaded.",
+  adminWaitlistSaved: "Lead review saved.",
   contactSuccess: "Message sent. The ScriptVault team will follow up shortly.",
   coverageIncomplete: "Please accept every coverage clause before submitting.",
   coverageSuccess:
