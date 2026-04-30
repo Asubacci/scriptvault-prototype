@@ -18,6 +18,7 @@
           <button class="nav-item" data-view="coverage" type="button">Script Coverage</button>
           <button class="nav-item" data-view="generator" type="button">Create Screenplay</button>
           <button class="nav-item" data-view="library" type="button">Login/Profile</button>
+          <button class="nav-item" data-view="settings" type="button">Settings</button>
         </nav>
       </header>
       <main class="main-content">
@@ -1125,6 +1126,42 @@
             </div>
           </section>
         </section>
+
+        <section class="view" id="settings" aria-labelledby="settings-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Prototype Settings</p>
+              <h1 id="settings-title">Connect this prototype to a deployed API.</h1>
+              <p>
+                Save API settings in this browser so waitlist and admin review flows can point to staging or
+                production without editing the website code.
+              </p>
+            </div>
+          </div>
+          <form class="panel form-panel settings-panel" id="apiSettingsForm">
+            <label>
+              API Base URL
+              <input id="settingsApiUrl" placeholder="https://api.scriptvault.africa" />
+            </label>
+            <label>
+              Admin Export Key
+              <input
+                id="settingsAdminKey"
+                type="password"
+                placeholder="Only needed for admin review/export"
+              />
+            </label>
+            <div class="clean-actions">
+              <button class="gold-button" type="submit">Save Settings</button>
+              <button class="outline-button" id="clearApiSettingsButton" type="button">Clear</button>
+            </div>
+            <p class="success-message" id="settingsStatus" role="status"></p>
+            <p class="fine-print">
+              These values stay in your browser local storage. Do not enter production secrets on a shared
+              device.
+            </p>
+          </form>
+        </section>
       </main>
       <footer class="site-footer" aria-label="Site footer">
         <div>
@@ -1148,6 +1185,7 @@
           <button data-view="coverage" type="button">Script Coverage</button>
           <button data-view="generator" type="button">Create Screenplay</button>
           <button data-view="producers" type="button">For Producers</button>
+          <button data-view="settings" type="button">Settings</button>
         </nav>
         <nav aria-label="Company navigation">
           <strong>Company</strong>

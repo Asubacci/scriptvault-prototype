@@ -1,4 +1,5 @@
 import { messages } from "./data/messages.js";
+import { getStoredApiSettings } from "./settings.js";
 import { getRequiredElement } from "./utils/dom.js";
 import { logger } from "./utils/logger.js";
 
@@ -9,7 +10,7 @@ function setStatus(element, message) {
 }
 
 function getApiBaseUrl() {
-  return window.SCRIPTVAULT_API_URL || window.localStorage.getItem("scriptvault_api_url") || "";
+  return getStoredApiSettings().apiUrl;
 }
 
 function getProducerPayload(form) {

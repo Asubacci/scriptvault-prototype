@@ -1,4 +1,5 @@
 import { messages } from "./data/messages.js";
+import { getStoredApiSettings } from "./settings.js";
 import { logger } from "./utils/logger.js";
 
 const sampleLeads = [
@@ -52,20 +53,19 @@ function getElement(selector) {
 function getApiSettings() {
   const apiUrlInput = getElement("#adminApiUrl");
   const adminKeyInput = getElement("#adminKey");
-  const savedApiUrl = window.SCRIPTVAULT_API_URL || window.localStorage.getItem("scriptvault_api_url") || "";
-  const savedAdminKey = window.localStorage.getItem("scriptvault_admin_key") || "";
+  const saved = getStoredApiSettings();
 
   if (apiUrlInput && !apiUrlInput.value) {
-    apiUrlInput.value = savedApiUrl;
+    apiUrlInput.value = saved.apiUrl;
   }
 
   if (adminKeyInput && !adminKeyInput.value) {
-    adminKeyInput.value = savedAdminKey;
+    adminKeyInput.value = saved.adminKey;
   }
 
   return {
-    apiUrl: apiUrlInput?.value.trim() || savedApiUrl,
-    adminKey: adminKeyInput?.value.trim() || savedAdminKey,
+    apiUrl: apiUrlInput?.value.trim() || saved.apiUrl,
+    adminKey: adminKeyInput?.value.trim() || saved.adminKey,
   };
 }
 

@@ -17,5 +17,7 @@ export const messages = {
     "Early access request received. We will send curated screenplay opportunities as the marketplace opens.",
   producerError:
     "We could not submit to the waitlist backend right now. Please try again or contact hello@scriptvault.africa.",
+  settingsCleared: "API settings cleared. Prototype will use demo mode.",
+  settingsSaved: "API settings saved for this browser.",
   unexpectedError: "Something went wrong. Please refresh and try again.",
 };
