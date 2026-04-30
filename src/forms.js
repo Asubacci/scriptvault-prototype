@@ -72,9 +72,27 @@ function initProducerForm() {
   });
 }
 
+function initPrototypeActions() {
+  const buyScreenplayButton = getRequiredElement("#buyScreenplayButton");
+  const purchaseSuccess = getRequiredElement("#purchaseSuccess");
+  const generateOutlineButton = getRequiredElement("#generateOutlineButton");
+  const generationSuccess = getRequiredElement("#generationSuccess");
+
+  buyScreenplayButton.addEventListener("click", () => {
+    setStatus(purchaseSuccess, messages.purchaseSuccess);
+    logger.info("purchase_demo_started", { item: "The Last Beacon" });
+  });
+
+  generateOutlineButton.addEventListener("click", () => {
+    setStatus(generationSuccess, messages.generationSuccess);
+    logger.info("generation_demo_started", { stage: "beat_outline" });
+  });
+}
+
 export function initForms() {
   initThemeSelector();
   initCoverageForm();
   initContactForm();
   initProducerForm();
+  initPrototypeActions();
 }

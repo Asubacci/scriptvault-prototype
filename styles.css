@@ -1318,6 +1318,42 @@ td {
   font-size: 36px;
 }
 
+.african-focus,
+.reader-credibility {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 22px;
+  align-items: start;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(216, 154, 37, 0.14), transparent 46%), rgba(255, 255, 255, 0.88);
+  box-shadow: 0 12px 34px rgba(22, 20, 15, 0.08);
+}
+
+.african-focus h2 {
+  margin-bottom: 0;
+}
+
+.reader-credibility {
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 24px;
+}
+
+.reader-credibility article {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffdfa;
+}
+
+.reader-credibility strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--forest);
+  font-size: 18px;
+}
+
 .path-grid,
 .steps-grid,
 .featured-grid,
@@ -1534,6 +1570,11 @@ td {
   box-shadow: 0 0 0 3px rgba(216, 154, 37, 0.12);
 }
 
+.free-package {
+  border-color: var(--forest);
+  background: #eef6f2;
+}
+
 .fine-print {
   color: var(--muted);
   font-size: 13px;
@@ -1596,6 +1637,8 @@ td {
   }
 
   .clean-hero,
+  .african-focus,
+  .reader-credibility,
   .path-grid,
   .steps-grid,
   .featured-grid,

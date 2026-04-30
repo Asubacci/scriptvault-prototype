@@ -26,12 +26,17 @@
             <div class="clean-hero-copy">
               <p class="eyebrow">ScriptVault</p>
               <h1 id="home-title">Turn your screenplay into a market-ready asset</h1>
-              <p>Get professional coverage, improve your script, and connect with producers ready to buy.</p>
+              <p>
+                Built for African screen stories: get credible coverage, improve your script, and connect with
+                producers looking for production-ready material.
+              </p>
               <div class="clean-actions">
                 <button class="gold-button" data-view="coverage" type="button">Get Script Coverage</button>
                 <button class="outline-button" data-view="marketplace" type="button">Browse Scripts</button>
               </div>
-              <small>Trusted by writers and producers for script validation and discovery</small>
+              <small
+                >Script validation, producer discovery, and screenplay development in one workflow.</small
+              >
             </div>
             <div class="hero-mark" aria-hidden="true">
               <span>INT.</span>
@@ -56,7 +61,7 @@
               <article class="path-card">
                 <span class="path-icon">P</span>
                 <h3>For Producers</h3>
-                <p>Discover ready-to-produce screenplays</p>
+                <p>Discover vetted African screenplays with clear production details</p>
                 <ul>
                   <li>Browse vetted scripts</li>
                   <li>View scores and breakdowns</li>
@@ -67,6 +72,18 @@
                 </button>
               </article>
             </div>
+          </section>
+
+          <section class="home-section african-focus" aria-labelledby="african-focus-title">
+            <div>
+              <p class="eyebrow">African screen industry infrastructure</p>
+              <h2 id="african-focus-title">Built for Nollywood, African studios, and independent writers.</h2>
+            </div>
+            <p>
+              ScriptVault is designed for the real production market around us: Lagos-set thrillers,
+              faith-and-family dramas, low-location stories, streaming-ready series, and producers who need
+              faster ways to find scripts they can actually make.
+            </p>
           </section>
 
           <section class="home-section" aria-labelledby="how-title">
@@ -125,7 +142,7 @@
               <article>
                 <span>Coverage</span>
                 <strong>₦7,500 - ₦50,000+</strong>
-                <p>Pay directly or use credits.</p>
+                <p>Start with a light script health check, then upgrade for full notes.</p>
               </article>
               <article>
                 <span>AI Credits</span>
@@ -135,7 +152,7 @@
               <article>
                 <span>Marketplace</span>
                 <strong>20% commission</strong>
-                <p>Sellers keep 80% after platform commission.</p>
+                <p>Sellers keep 80% after platform commission when scripts are licensed.</p>
               </article>
             </div>
           </section>
@@ -178,8 +195,8 @@
         <section class="view" id="marketplace" aria-labelledby="marketplace-title">
           <div class="section-heading">
             <div>
-              <p class="eyebrow">Marketplace + Coverage + Screenplay Generation</p>
-              <h1 id="marketplace-title">Production-ready stories, validated before they sell.</h1>
+              <p class="eyebrow">African marketplace + coverage + screenplay generation</p>
+              <h1 id="marketplace-title">Production-ready African stories, validated before they sell.</h1>
               <p>
                 Buy screenplays, test market readiness, and generate structured drafts with an engine built
                 around story beats, conflict, and filmable scenes.
@@ -321,8 +338,9 @@
                 Download licenses allow review and internal consideration. Production rights require a
                 separate rights purchase and agreement.
               </p>
-              <button class="gold-button full" type="button">Buy Screenplay</button>
+              <button class="gold-button full" id="buyScreenplayButton" type="button">Buy Screenplay</button>
               <button class="outline-button full" type="button">Add Scene Breakdown +₦10,000</button>
+              <p class="success-message" id="purchaseSuccess" role="status"></p>
             </aside>
           </div>
         </section>
@@ -331,16 +349,18 @@
           <div class="producer-hero">
             <div>
               <p class="eyebrow">Early Access</p>
-              <h1 id="producers-title">Find coverage-vetted screenplays before the market gets crowded.</h1>
+              <h1 id="producers-title">
+                Find coverage-vetted African screenplays before the market gets crowded.
+              </h1>
               <p>
                 Join the producer list to receive curated scripts, licensing updates, and early access to
                 verified stories that match your production needs.
               </p>
             </div>
             <div class="demand-card">
-              <span>Launch Signal</span>
-              <strong>10-30</strong>
-              <p>serious buyer conversations validates the first marketplace loop.</p>
+              <span>Producer Access</span>
+              <strong>Curated</strong>
+              <p>Receive matched scripts, coverage summaries, and rights options as inventory opens.</p>
             </div>
           </div>
 
@@ -441,18 +461,18 @@
                   <p>Listings show seller profiles, rights type, add-ons, and coverage-backed pricing.</p>
                 </article>
               </div>
-              <h3>Demand Signals We Track</h3>
+              <h3>What Early Producers Receive</h3>
               <ul class="check-list">
-                <li>Genres producers request most often</li>
-                <li>Budget bands and production timelines</li>
-                <li>Exclusive vs non-exclusive licensing preference</li>
-                <li>Interest in add-ons like scene breakdowns and shot lists</li>
+                <li>Curated screenplay alerts by genre, budget, and production timeline</li>
+                <li>Coverage-score previews before deeper review</li>
+                <li>Rights options clearly separated from simple download access</li>
+                <li>Early partnership conversations for studios, producers, and investors</li>
               </ul>
               <div class="launch-metrics">
-                <span><strong>100-300</strong> writer waitlist</span>
-                <span><strong>30-50</strong> coverage submissions</span>
-                <span><strong>10-20</strong> approved scripts</span>
-                <span><strong>3-5</strong> paid licensing conversations</span>
+                <span><strong>Curated</strong> script discovery</span>
+                <span><strong>Verified</strong> coverage signals</span>
+                <span><strong>Clear</strong> rights conversations</span>
+                <span><strong>African</strong> story focus</span>
               </div>
             </aside>
           </div>
@@ -470,7 +490,38 @@
             </div>
           </div>
 
+          <div class="reader-credibility" aria-label="Coverage credibility">
+            <article>
+              <strong>Who reviews the script?</strong>
+              <p>
+                Coverage is designed as a hybrid workflow: trained story readers and editors review the final
+                report, while AI can assist with first-pass structure checks, summaries, and consistency
+                flags.
+              </p>
+            </article>
+            <article>
+              <strong>What makes it credible?</strong>
+              <p>
+                Each report is judged against story structure, character, dialogue, market viability, budget
+                realism, locations, cast size, and whether the script is ready for African production needs.
+              </p>
+            </article>
+            <article>
+              <strong>Typical turnaround</strong>
+              <p>
+                Free checks can return a quick readiness signal. Paid coverage is queued for a detailed PDF
+                report and marketplace eligibility review.
+              </p>
+            </article>
+          </div>
+
           <div class="package-grid coverage-packages" aria-label="Coverage pricing packages">
+            <article class="package-card free-package">
+              <span>Free Script Health Check</span>
+              <strong>&#8358;0</strong>
+              <small>Limited readiness signal</small>
+              <p>Basic fit check to reduce friction before writers pay for deeper coverage.</p>
+            </article>
             <article class="package-card">
               <span>Basic Coverage</span>
               <strong>₦7,500</strong>
@@ -518,7 +569,10 @@
                   <option>Coverage + rewrite support</option>
                 </select>
               </label>
-              <label>Script file<input required type="file" accept=".pdf,.doc,.docx,.fdx" /></label>
+              <label
+                >Script file <small>Optional in this demo</small
+                ><input type="file" accept=".pdf,.doc,.docx,.fdx"
+              /></label>
               <div class="disclaimer-box">
                 <h3>Coverage Disclaimer</h3>
                 <p>
@@ -701,7 +755,10 @@
                   </select></label
                 >
               </div>
-              <button class="gold-button full" type="button">Generate Beat Outline - 4 credits</button>
+              <button class="gold-button full" id="generateOutlineButton" type="button">
+                Generate Beat Outline - 4 credits
+              </button>
+              <p class="success-message" id="generationSuccess" role="status"></p>
             </form>
 
             <div class="panel engine-preview">
@@ -807,23 +864,21 @@
         <section class="view" id="about" aria-labelledby="about-title">
           <div class="about-hero">
             <p class="eyebrow">About ScriptVault</p>
-            <h1 id="about-title">
-              Moving screenplays from idea to validation to production to monetization.
-            </h1>
+            <h1 id="about-title">The screenplay infrastructure layer for African film and television.</h1>
           </div>
           <div class="two-column about-cards">
             <article class="panel">
               <h2>Mission</h2>
               <p>
-                Help writers, producers, and studios discover structured, filmable, market-ready screenplays
-                with transparent quality control.
+                Help African writers, producers, and studios move scripts from idea to coverage, production
+                readiness, rights conversations, and monetization.
               </p>
             </article>
             <article class="panel">
               <h2>Vision</h2>
               <p>
-                Become the trusted screenplay infrastructure for African storytelling and commercially viable
-                production pipelines.
+                Become the trusted discovery and quality-control layer for Nollywood, African streaming
+                originals, independent producers, and global buyers seeking African stories.
               </p>
             </article>
           </div>
@@ -837,7 +892,10 @@
             </article>
             <article class="panel">
               <h2>Quality Gating</h2>
-              <p>Scripts must pass paid coverage before they can enter the marketplace for sale.</p>
+              <p>
+                Scripts can start with a free health check, but marketplace listing requires transparent
+                coverage scoring and quality review.
+              </p>
             </article>
             <article class="panel">
               <h2>Production Readiness</h2>
