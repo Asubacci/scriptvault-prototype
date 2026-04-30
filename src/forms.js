@@ -8,6 +8,51 @@ function setStatus(element, message) {
   element.focus({ preventScroll: true });
 }
 
+function getApiBaseUrl() {
+  return window.SCRIPTVAULT_API_URL || window.localStorage.getItem("scriptvault_api_url") || "";
+}
+
+function getProducerPayload(form) {
+  const formData = new window.FormData(form);
+
+  return {
+    fullName: String(formData.get("fullName") || ""),
+    email: String(formData.get("email") || ""),
+    phone: String(formData.get("phone") || ""),
+    company: String(formData.get("company") || ""),
+    role: String(formData.get("role") || ""),
+    primaryNeed: String(formData.get("primaryNeed") || ""),
+    preferredGenre: String(formData.get("preferredGenre") || ""),
+    budgetRange: String(formData.get("budgetRange") || ""),
+    productionTimeline: String(formData.get("productionTimeline") || ""),
+    interests: formData.getAll("interests").map(String),
+    notes: String(formData.get("notes") || ""),
+    source: "github-pages-prototype",
+    consentToContact: formData.get("consentToContact") === "on",
+    consentToUpdates: formData.get("consentToUpdates") === "on",
+  };
+}
+
+async function submitProducerLead(payload) {
+  const apiBaseUrl = getApiBaseUrl();
+
+  if (!apiBaseUrl) {
+    return { mode: "demo" };
+  }
+
+  const response = await window.fetch(`${apiBaseUrl.replace(/\/$/, "")}/waitlist/producer`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+
+  if (!response.ok) {
+    throw new Error(`Waitlist API returned ${response.status}`);
+  }
+
+  return response.json();
+}
+
 function initThemeSelector() {
   const themeSelect = getRequiredElement("#themeSelect");
   const customThemeWrap = getRequiredElement("#customThemeWrap");
@@ -64,11 +109,22 @@ function initProducerForm() {
   const producerForm = getRequiredElement("#producerForm");
   const producerSuccess = getRequiredElement("#producerSuccess");
 
-  producerForm.addEventListener("submit", (event) => {
+  producerForm.addEventListener("submit", async (event) => {
     event.preventDefault();
-    setStatus(producerSuccess, messages.producerSuccess);
-    producerForm.reset();
-    logger.info("producer_waitlist_submit_success");
+
+    try {
+      const payload = getProducerPayload(producerForm);
+      const result = await submitProducerLead(payload);
+      setStatus(
+        producerSuccess,
+        result.mode === "demo" ? messages.producerSuccessDemo : messages.producerSuccess
+      );
+      producerForm.reset();
+      logger.info("producer_waitlist_submit_success", { mode: result.mode || "api" });
+    } catch (error) {
+      setStatus(producerSuccess, messages.producerError);
+      logger.warn("producer_waitlist_submit_failed", { message: error.message });
+    }
   });
 }
 

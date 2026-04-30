@@ -367,14 +367,19 @@
           <div class="two-column">
             <form class="panel form-panel" id="producerForm">
               <h2>Producer Waitlist</h2>
-              <label>Full name<input required placeholder="Your name" /></label>
+              <label>Full name<input name="fullName" required placeholder="Your name" /></label>
               <label
-                >Company or studio<input placeholder="Production company, studio, or independent"
+                >Company or studio<input
+                  name="company"
+                  placeholder="Production company, studio, or independent"
               /></label>
-              <label>Email<input required type="email" placeholder="producer@example.com" /></label>
+              <label
+                >Email<input name="email" required type="email" placeholder="producer@example.com"
+              /></label>
+              <label>Phone<input name="phone" placeholder="+234" /></label>
               <label
                 >Role
-                <select required>
+                <select name="role" required>
                   <option value="">Select role</option>
                   <option>Producer</option>
                   <option>Director</option>
@@ -386,7 +391,7 @@
               </label>
               <label
                 >What are you looking for?
-                <select required>
+                <select name="primaryNeed" required>
                   <option value="">Select primary need</option>
                   <option>Buy non-exclusive scripts</option>
                   <option>Buy exclusive rights</option>
@@ -398,7 +403,7 @@
               <div class="compact-grid">
                 <label
                   >Preferred genre
-                  <select>
+                  <select name="preferredGenre">
                     <option>Drama</option>
                     <option>Thriller</option>
                     <option>Comedy</option>
@@ -408,7 +413,7 @@
                 </label>
                 <label
                   >Typical budget
-                  <select>
+                  <select name="budgetRange">
                     <option>Micro budget</option>
                     <option>Low budget</option>
                     <option>Mid budget</option>
@@ -418,7 +423,7 @@
               </div>
               <label
                 >Production timeline
-                <select>
+                <select name="productionTimeline">
                   <option>Immediately sourcing scripts</option>
                   <option>Next 3 months</option>
                   <option>Next 6 months</option>
@@ -427,17 +432,50 @@
               </label>
               <fieldset class="interest-checks">
                 <legend>Send me updates about</legend>
-                <label><input type="checkbox" checked /> New verified marketplace scripts</label>
-                <label><input type="checkbox" checked /> Low-location, cast-efficient scripts</label>
-                <label><input type="checkbox" /> Coverage reports and score previews</label>
-                <label><input type="checkbox" /> Investment and partnership opportunities</label>
+                <label
+                  ><input name="interests" type="checkbox" value="New verified marketplace scripts" checked />
+                  New verified marketplace scripts</label
+                >
+                <label
+                  ><input
+                    name="interests"
+                    type="checkbox"
+                    value="Low-location, cast-efficient scripts"
+                    checked
+                  />
+                  Low-location, cast-efficient scripts</label
+                >
+                <label
+                  ><input name="interests" type="checkbox" value="Coverage reports and score previews" />
+                  Coverage reports and score previews</label
+                >
+                <label
+                  ><input name="interests" type="checkbox" value="Investment and partnership opportunities" />
+                  Investment and partnership opportunities</label
+                >
               </fieldset>
               <label
                 >Notes<textarea
+                  name="notes"
                   rows="4"
                   placeholder="Tell us what kinds of stories you want first access to."
                 ></textarea>
               </label>
+              <fieldset class="interest-checks consent-checks">
+                <legend>Consent</legend>
+                <label
+                  ><input name="consentToContact" type="checkbox" required /> I agree that ScriptVault may
+                  contact me about my early-access request.</label
+                >
+                <label
+                  ><input name="consentToUpdates" type="checkbox" /> Send me product updates, curated
+                  screenplay alerts, and partnership news.</label
+                >
+                <small>
+                  Your details will be used to review demand, match producers with relevant scripts, and
+                  follow up about ScriptVault. You can opt out of updates later.
+                </small>
+              </fieldset>
               <button class="gold-button full" type="submit">Request Early Access</button>
               <p class="success-message" id="producerSuccess" role="status"></p>
             </form>

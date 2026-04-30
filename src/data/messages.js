@@ -8,6 +8,10 @@ export const messages = {
   purchaseSuccess:
     "Purchase flow started in demo mode. Next production step: choose license type, verify payment, issue access, and record seller commission.",
   producerSuccess:
+    "Early access request received and stored. We will send curated screenplay opportunities as the marketplace opens.",
+  producerSuccessDemo:
     "Early access request received. We will send curated screenplay opportunities as the marketplace opens.",
+  producerError:
+    "We could not submit to the waitlist backend right now. Please try again or contact hello@scriptvault.africa.",
   unexpectedError: "Something went wrong. Please refresh and try again.",
 };
