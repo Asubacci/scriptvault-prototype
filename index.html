@@ -4,6 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ScriptVault - Screenplay Ecosystem</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -14,34 +20,218 @@
           <span>ScriptVault</span>
         </button>
         <nav class="nav-list" aria-label="Primary navigation">
+          <button class="nav-item" data-view="coverage" type="button">For Writers</button>
+          <button class="nav-item" data-view="marketplace" type="button">For Producers</button>
           <button class="nav-item" data-view="marketplace" type="button">Marketplace</button>
-          <button class="nav-item" data-view="coverage" type="button">Script Coverage</button>
-          <button class="nav-item" data-view="generator" type="button">Create Screenplay</button>
-          <button class="nav-item" data-view="library" type="button">Login/Profile</button>
-          <button class="nav-item" data-view="settings" type="button">Settings</button>
+          <button class="nav-item" data-view="about" type="button">Rights & Trust</button>
+          <button class="nav-item nav-login" data-view="library" type="button">Log in</button>
         </nav>
       </header>
       <main class="main-content">
         <section class="view active" id="home" aria-labelledby="home-title">
-          <section class="clean-hero">
+          <section class="clean-hero cinematic-hero">
             <div class="clean-hero-copy">
               <p class="eyebrow">ScriptVault</p>
-              <h1 id="home-title">Turn your screenplay into a market-ready asset</h1>
+              <h1 id="home-title">Find and validate production-ready screenplays.</h1>
               <p>
-                Built for African screen stories: get credible coverage, improve your script, and connect with
-                producers looking for production-ready material.
+                ScriptVault helps writers refine their scripts with professional coverage and helps producers
+                discover vetted, market-ready screenplays they can actually produce.
               </p>
               <div class="clean-actions">
                 <button class="gold-button" data-view="coverage" type="button">Get Script Coverage</button>
-                <button class="outline-button" data-view="marketplace" type="button">Browse Scripts</button>
+                <button class="outline-button" data-view="marketplace" type="button">Browse Screenplays</button>
               </div>
-              <small
-                >Script validation, producer discovery, and screenplay development in one workflow.</small
-              >
+              <small>Built for filmmakers, producers, and writers in emerging film markets.</small>
             </div>
-            <div class="hero-mark" aria-hidden="true">
-              <span>INT.</span>
-              <strong>Validated stories only</strong>
+            <div class="hero-cinema-frame" aria-label="Director table with annotated script pages">
+              <div class="hero-photo-card">
+                <span class="hero-light hero-light-one"></span>
+                <span class="hero-light hero-light-two"></span>
+                <div class="director-chair">DIRECTOR</div>
+                <div class="script-stack">
+                  <span>Coverage Notes</span>
+                  <strong>Lagos Nights</strong>
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                </div>
+                <div class="coffee-cup">SV</div>
+              </div>
+            </div>
+          </section>
+
+          <section class="trust-strip" aria-label="ScriptVault production trust markers">
+            <h2>Designed for real-world production, not just writing.</h2>
+            <div>
+              <article>
+                <span>01</span>
+                <strong>Structured script coverage</strong>
+                <p>In-depth analysis that helps writers improve.</p>
+              </article>
+              <article>
+                <span>02</span>
+                <strong>Production-aware filtering</strong>
+                <p>Find scripts that fit your budget, locations, and cast.</p>
+              </article>
+              <article>
+                <span>03</span>
+                <strong>Rights-ready marketplace</strong>
+                <p>Clear licensing signals before producers engage.</p>
+              </article>
+              <article>
+                <span>04</span>
+                <strong>Built for Nollywood & global streaming markets</strong>
+                <p>African stories with international production context.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="home-section problem-section" aria-labelledby="problem-title">
+            <h2 id="problem-title">The script process is broken.</h2>
+            <div class="steps-grid problem-grid">
+              <article>
+                <span>W</span>
+                <h3>For Writers</h3>
+                <p>You write a script but do not know if it is strong enough to sell or produce.</p>
+              </article>
+              <article>
+                <span>P</span>
+                <h3>For Producers</h3>
+                <p>You waste time reviewing scripts that are not structured, practical, or production-ready.</p>
+              </article>
+              <article>
+                <span>I</span>
+                <h3>For the Industry</h3>
+                <p>Great stories get lost because there is no trusted system to validate and surface them.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="home-section solution-section" aria-labelledby="solution-title">
+            <p class="eyebrow">The pipeline</p>
+            <h2 id="solution-title"><span>ScriptVault</span> fixes that.</h2>
+            <p>A structured system that turns raw scripts into validated, production-ready assets.</p>
+            <div class="solution-flow">
+              <article>
+                <span>1</span>
+                <h3>Submit for Coverage</h3>
+                <p>Get professional analysis, scoring, and clear feedback on structure, pacing, and market fit.</p>
+              </article>
+              <article>
+                <span>2</span>
+                <h3>Improve & Validate</h3>
+                <p>Strengthen your screenplay using real guidance, not guesswork.</p>
+              </article>
+              <article>
+                <span>3</span>
+                <h3>Enter the Marketplace</h3>
+                <p>Make your script discoverable to producers looking for ready-to-shoot projects.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="home-section product-grid" aria-label="ScriptVault coverage and marketplace">
+            <article class="premium-panel coverage-panel">
+              <div>
+                <p class="eyebrow">Script coverage</p>
+                <h2>Professional script coverage that actually helps you improve.</h2>
+                <p>
+                  Our coverage goes beyond generic notes. You get structured analysis on story, character,
+                  pacing, dialogue, and production viability.
+                </p>
+                <ul class="check-list">
+                  <li>Clear scoring across key story elements</li>
+                  <li>Actionable improvement notes</li>
+                  <li>Market and production insights</li>
+                  <li>Written by trained story analysts</li>
+                </ul>
+                <button class="gold-button" data-view="coverage" type="button">Submit Your Script</button>
+              </div>
+              <div class="report-card" aria-label="Sample script coverage report preview">
+                <span>Coverage Report</span>
+                <h3>Lagos Nights</h3>
+                <small>Crime Thriller / 96 pages</small>
+                <strong>8.4 <em>/10</em></strong>
+                <dl>
+                  <div><dt>Story</dt><dd style="--score: 86%"></dd><span>8.6</span></div>
+                  <div><dt>Characters</dt><dd style="--score: 80%"></dd><span>8.0</span></div>
+                  <div><dt>Structure</dt><dd style="--score: 85%"></dd><span>8.5</span></div>
+                  <div><dt>Dialogue</dt><dd style="--score: 75%"></dd><span>7.5</span></div>
+                  <div><dt>Market fit</dt><dd style="--score: 88%"></dd><span>8.8</span></div>
+                </dl>
+                <p><b>Recommendation</b> Recommended</p>
+              </div>
+            </article>
+
+            <article class="premium-panel marketplace-panel">
+              <p class="eyebrow">Marketplace</p>
+              <h2>Discover screenplays you can actually produce.</h2>
+              <p>Browse vetted scripts filtered by genre, budget, cast size, and production requirements.</p>
+              <div class="deal-card">
+                <div class="deal-poster"><span>Lagos Nights</span></div>
+                <div>
+                  <h3>Lagos Nights</h3>
+                  <p>Crime Thriller</p>
+                  <dl>
+                    <div><dt>Budget</dt><dd>&#8358;15M - &#8358;25M</dd></div>
+                    <div><dt>Cast</dt><dd>6 major roles</dd></div>
+                    <div><dt>Locations</dt><dd>4</dd></div>
+                    <div><dt>Rating</dt><dd>8.4 / 10</dd></div>
+                    <div><dt>Tone</dt><dd>King of Boys meets Shanty Town</dd></div>
+                    <div><dt>Market fit</dt><dd>Cinema / Streaming</dd></div>
+                  </dl>
+                </div>
+              </div>
+              <button class="gold-button" data-view="marketplace" type="button">Browse Marketplace</button>
+            </article>
+
+            <article class="premium-panel producer-panel">
+              <div>
+                <p class="eyebrow">For producers</p>
+                <h2>Built for producers who want less risk.</h2>
+                <p>
+                  Every script on ScriptVault goes through structured evaluation so you are not starting from zero.
+                </p>
+                <ul class="check-list">
+                  <li>Pre-evaluated scripts</li>
+                  <li>Production-aware filtering</li>
+                  <li>Faster decision-making</li>
+                  <li>Direct access to rights holders</li>
+                </ul>
+                <button class="gold-button" data-view="marketplace" type="button">Join as a Producer</button>
+              </div>
+              <div class="producer-portrait" aria-hidden="true"></div>
+            </article>
+          </section>
+
+          <section class="writer-band" aria-labelledby="writer-title">
+            <div>
+              <p class="eyebrow">For writers</p>
+              <h2 id="writer-title">Turn your script into a market-ready asset.</h2>
+              <p>
+                Whether you are writing your first screenplay or refining your tenth, ScriptVault helps you move
+                from draft to opportunity.
+              </p>
+            </div>
+            <div class="writer-outcomes">
+              <span>Professional Feedback</span>
+              <span>Stronger Scripts</span>
+              <span>More Visibility</span>
+              <span>Real Opportunities</span>
+            </div>
+            <button class="outline-button" data-view="coverage" type="button">Start With Coverage</button>
+          </section>
+
+          <section class="home-section outcome-section" aria-labelledby="outcome-title">
+            <h2 id="outcome-title">A platform built for real industry outcomes.</h2>
+            <p>
+              Writers improve and monetize their scripts. Producers find projects faster. ScriptVault bridges
+              the gap between a promising draft and a production-ready deal.
+            </p>
+            <div class="trust-grid-simple">
+              <article><strong>Who reads scripts</strong><p>Coverage is positioned as trained analysis, not automated guesswork.</p></article>
+              <article><strong>How rights work</strong><p>Marketplace listings separate discovery from licensing conversations.</p></article>
+              <article><strong>Why producers trust it</strong><p>Scores, budget signals, cast size, locations, and market fit are visible upfront.</p></article>
             </div>
           </section>
 
@@ -199,8 +389,8 @@
           <section class="final-cta" aria-labelledby="final-cta-title">
             <h2 id="final-cta-title">Ready to take your screenplay seriously?</h2>
             <div class="clean-actions">
-              <button class="gold-button" data-view="coverage" type="button">Get Script Coverage</button>
-              <button class="outline-button" data-view="marketplace" type="button">Browse Marketplace</button>
+              <button class="gold-button" data-view="coverage" type="button">Submit Your Script</button>
+              <button class="outline-button" data-view="marketplace" type="button">Explore Scripts</button>
             </div>
           </section>
         </section>
@@ -1175,17 +1365,15 @@
             <span>ScriptVault</span>
           </button>
           <p>
-            Screenplay coverage, marketplace discovery, and structured screenplay development for African film
-            and television.
+            The trusted pipeline from script validation to producer discovery for African film and television.
           </p>
         </div>
         <nav aria-label="Footer navigation">
           <strong>Platform</strong>
           <button data-view="marketplace" type="button">Marketplace</button>
           <button data-view="coverage" type="button">Script Coverage</button>
-          <button data-view="generator" type="button">Create Screenplay</button>
           <button data-view="producers" type="button">For Producers</button>
-          <button data-view="settings" type="button">Settings</button>
+          <button data-view="library" type="button">Login/Profile</button>
         </nav>
         <nav aria-label="Company navigation">
           <strong>Company</strong>
@@ -1198,7 +1386,7 @@
           <strong>Legal</strong>
           <a href="#terms">Terms of Service</a>
           <a href="#privacy">Privacy Policy</a>
-          <a href="#cookies">Cookie Notice</a>
+          <a href="#rights">Rights & Licensing</a>
           <a href="#coverage-disclaimer">Coverage Disclaimer</a>
         </nav>
         <div class="footer-bottom">
